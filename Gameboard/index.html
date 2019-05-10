@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>GameBoard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A game board that displays the scores of your favorite teams">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">    
+    <script src="js/vendor/angular.min.js" defer></script>
+  </head>
+  <body ng-app="GameboardApp">
+    <div class="header">
+      <h1 class="logo">GameBoard</h1>
+    </div>
+
+    <div class="main" ng-controller="ScoreController">
+      <div class="container">
+        
+        <div class="row">
+          <game ng-repeat="score in scores" info="score"></game>
+        </div>
+      
+      </div>
+    </div>
+    
+    <!-- Modules -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/ScoreController.js" defer></script>
+
+    <!-- Directives -->
+    <script src="js/directives/game.js" defer></script>
+    
+
+  </body>
+</html>
